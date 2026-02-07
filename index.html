@@ -147,7 +147,6 @@ const respostas = [
 let lastClick = 0;
 let combo = 0;
 let totalCliques = 0;
-let popAberto = sessionStorage.getItem("pop");
 
 document.getElementById("botao").addEventListener("click", () => {
   const now = Date.now();
@@ -180,11 +179,6 @@ document.getElementById("botao").addEventListener("click", () => {
 
   respostaEl.innerText = resposta;
 
-  if (!popAberto) {
-    window.open("LINK_DA_MONETAG_AQUI", "_blank");
-    sessionStorage.setItem("pop", "1");
-    popAberto = true;
-  }
 });
 
 function soltarConfete() {
